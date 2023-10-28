@@ -4,10 +4,10 @@
 ## Introduction
 
 ## Model Explanation
-![My Image](https://github.com/Minefix049/Waste-Disposal-Optimization/blob/dev_shishenghao/case.png?raw=trueg)
-
 
 ## Case Study
+![My Image](https://github.com/Minefix049/Waste-Disposal-Optimization/blob/dev_shishenghao/case.png?raw=trueg)
+
 
 ## Reference
 
