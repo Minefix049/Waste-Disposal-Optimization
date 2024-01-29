@@ -19,7 +19,7 @@ Based on the model developed by Mitropoulos, the MIP location allocation models 
 A critical component of our methodology is the collection of accurate and comprehensive data regarding Shengsi island's geography, infrastructure and wate generation patters. To achieve this, we have emplyed the API services of Gaode, a leading provider of mapping and location-based services in china.
 we use polygon serach methods provided by Gaode API to collect the data of wate generation distribution. We also used Gaode API to compute the distance matix of location candidates.
 ## Computational study
-![image](https://github.com/Minefix049/Waste-Disposal-Optimization/assets/30038539/3faa29fe-5da4-4c4c-8072-019140689d59)# 
+![image](https://github.com/Minefix049/Waste-Disposal-Optimization/blob/main/case.png)
 This study used the data of Shengsi island collected from Gaode API to optimize the location planning of process plant and landfill site. For  fast converge of the model. we introduced an artificial cuts to the model by constraining the number of landfill sites.
 In case of 1 landfill, ...
 In case of 2 landfill, ...
