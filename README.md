@@ -1,74 +1,30 @@
-# Waste-Disposal-Optimization
-
-
+Waste-Disposal-Optimization
 ## Introduction
-
-## Model Explanation
-
-## Case Study
-![My Image](https://github.com/Minefix049/Waste-Disposal-Optimization/blob/dev_shishenghao/case.png?raw=trueg)
-
-
-## Reference
-
-###### This is a Heading h6
-
-## Emphasis
-
-*This text will be italic*  
-_This will also be italic_
-
-**This text will be bold**  
-__This will also be bold__
-
-_You **can** combine them_
-
-## Lists
-
-### Unordered
-
-* Item 1
-* Item 2
-* Item 2a
-* Item 2b
-
-### Ordered
-
-1. Item 1
-2. Item 2
-3. Item 3
-    1. Item 3a
-    2. Item 3b
-
-## Images
-
-![This is an alt text.](/image/sample.webp "This is a sample image.")
-
-## Links
-
-You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
-
-## Blockquotes
-
-> Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
->
->> Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
-
-## Tables
-
-| Left columns  | Right columns |
-| ------------- |:-------------:|
-| left foo      | right foo     |
-| left bar      | right bar     |
-| left baz      | right baz     |
-
-## Blocks of code
-
-```
-let message = 'Hello world';
-alert(message);
-```
-
-## Inline code
-
-This web site is using `markedjs/marked`.
+### Background
+Solid waste managment remains a critical challengr for urban environments worldwid. ...
+### Problem Statement
+Shengsi island as as a tourism  island faces issues that hinders the effectiveness if its  solid waste management system. ... introduce data in shengsi island.  
+### Objective
+This study aims to address the multi-level locational planning problem of an intergrated waste management system in Shengsi island using milp(mixed integer linear programming). The objective is to integrate various apsects of waste management, cosidering environmental, economic and logistical factors to propose a comprehensive solution.
+### Literature Reivew
+Caruso[1] developed a a SWM planning system of 3 levels.
+Mitropoulos[2] developed a  an integrated SWM system of 4 levels at the regional level. By identifying the system units needed along with the sites where these units will be constructed, this work minimized the overall SVM cost including transportation costs,  fixed
+operation and maintenance costs of transfer station and treatment plants as well as the landfill costs which correspons to the enviromental effects of SVM system.
+### Scope
+The scope of this research encompasses the applicatioon of open sourced solver like ortools on the milp model tailored to the specific conditions of shengsi island. This study contributes to the improvement of local waste management practrices in Shengsi island. 
+## Methodology
+### MILP Formulation
+Based on the model developed by Mitropoulos, the MIP location allocation models are as follows.  Because of the limited landspace in Shengsi island, this study didn't consider the requirements of transfer station in this model.
+### Data Collection
+A critical component of our methodology is the collection of accurate and comprehensive data regarding Shengsi island's geography, infrastructure and wate generation patters. To achieve this, we have emplyed the API services of Gaode, a leading provider of mapping and location-based services in china.
+we use polygon serach methods provided by Gaode API to collect the data of wate generation distribution. We also used Gaode API to compute the distance matix of location candidates.
+## Computational study
+![image](https://github.com/Minefix049/Waste-Disposal-Optimization/assets/30038539/3faa29fe-5da4-4c4c-8072-019140689d59)# 
+This study used the data of Shengsi island collected from Gaode API to optimize the location planning of process plant and landfill site. For  fast converge of the model. we introduced an artificial cuts to the model by constraining the number of landfill sites.
+In case of 1 landfill, ...
+In case of 2 landfill, ...
+## Discusion
+### Comparison with existing solutions
+### Implications
+Discuss the implications of this finding for policy, practive adn future research.
+![image](https://github.com/Minefix049/Waste-Disposal-Optimization/assets/102139334/1665463a-42dd-468b-acf9-a082d06f4564)
