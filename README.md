@@ -27,4 +27,3 @@ In case of 2 landfill, ...
 ### Comparison with existing solutions
 ### Implications
 Discuss the implications of this finding for policy, practive adn future research.
-![image](https://github.com/Minefix049/Waste-Disposal-Optimization/assets/102139334/1665463a-42dd-468b-acf9-a082d06f4564)
