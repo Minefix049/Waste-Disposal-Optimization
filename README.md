@@ -9,7 +9,25 @@ The area of Shengsi island is 8824 square kilometer.
 This study aims to address the multi-level locational planning problem of an intergrated waste management system in Shengsi island using MILP(mixed integer linear programming). The objective is to integrate various apsects of waste management, cosidering environmental, economic and logistical factors to propose a comprehensive solution.
 ### Literature Reivew
 Caruso[1] developed a solid waste management (SWM) planning system comprising three hierarchical levels. This system aimed to efficiently address the complexities of waste management by integrating processes at various stages, from collection to disposal. Through this three-tiered approach, Caruso sought to optimize resource allocation, enhance operational effectiveness, and mitigate environmental impacts associated with waste management practices.
+
+Based on the provided classification system, this can be categorized as follows:
+
+p: Single period.
+s: No specific subfields mentioned.
+c: No additional constraints or characteristics specified.
+o: No specific optimization objectives mentioned.
+Therefore, it falls under the category "p".
+
 Mitropoulos[2] developed an integrated solid waste management (SWM) system operating across four hierarchical levels at the regional scale. This comprehensive system aimed to address the multifaceted challenges of waste management by incorporating strategic planning, logistical coordination, and sustainable practices at each level. By integrating collection, sorting, treatment, and disposal processes within a regional framework, Mitropoulos aimed to optimize resource utilization, minimize environmental impacts, and enhance the overall efficiency and effectiveness of solid waste management practices within the region.
+
+Based on the provided classification system, this can be categorized as follows:
+
+p: Single period.
+s: It includes C and L, indicating consideration of optimal locations for new collection points and existing or new landfill, disposal, or market facilities.
+c: No additional constraints or characteristics are mentioned.
+o: No specific optimization objectives are mentioned.
+Therefore, it falls under the category "pC,L/".
+
 ### Scope
 The scope of this research encompasses the applicatioon of open sourced solver like ortools on the MILP model tailored to the specific conditions of shengsi island. This study contributes to the improvement of local waste management practices in Shengsi island. 
 ## Methodology
