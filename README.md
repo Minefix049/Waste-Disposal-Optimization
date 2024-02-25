@@ -28,7 +28,10 @@ p: Single period.
 s: It includes C and L, indicating consideration of optimal locations for new collection points and existing or new landfill, disposal, or market facilities.
 c: No additional constraints or characteristics are mentioned.
 o: No specific optimization objectives are mentioned.
-Therefore, it falls under the category "pC,L/".
+S,P,L: Transfer stations, Processing plant, Landfill considered.
+TC,FC: Minimized transportation costs and incorporated fixed costs related to existing facility operations or new facility openings,
+
+Therefore, it falls under the category "1/S,P,L/–/TC,FC MIP" model.
 
 ### Scope
 The scope of this research encompasses the applicatioon of open sourced solver like ortools on the MILP model tailored to the specific conditions of shengsi island. This study contributes to the improvement of local waste management practices in Shengsi island. 
