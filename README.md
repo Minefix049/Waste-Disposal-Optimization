@@ -16,7 +16,9 @@ p: Single period.
 s: No specific subfields mentioned.
 c: No additional constraints or characteristics specified.
 o: No specific optimization objectives mentioned.
-Therefore, it falls under the category "p".
+L: Existing Landfill considered.
+TC,FC: Minimized transportation costs and incorporated fixed costs related to existing facility operations or new facility openings,
+Therefore, it falls under the category 1/P,L/multiwaste/TC,FC, multiobj model.
 
 Mitropoulos[2] developed an integrated solid waste management (SWM) system operating across four hierarchical levels at the regional scale. This comprehensive system aimed to address the multifaceted challenges of waste management by incorporating strategic planning, logistical coordination, and sustainable practices at each level. By integrating collection, sorting, treatment, and disposal processes within a regional framework, Mitropoulos aimed to optimize resource utilization, minimize environmental impacts, and enhance the overall efficiency and effectiveness of solid waste management practices within the region.
 
@@ -38,7 +40,7 @@ A critical component of our methodology is the collection of accurate and compre
 we use polygon serach methods provided by Gaode API to collect the data of wate generation distribution. We also used Gaode API to compute the distance matrix of location candidates.
 ## Computational study
 ![image](https://github.com/Minefix049/Waste-Disposal-Optimization/blob/main/case.png)
-This study used the data of Shengsi island collected from Gaode API to optimize the location planning of process plant and landfill site. For  fast converge of the model. we introduced an artificial cuts to the model by constraining the number of landfill sites.
+This study used the data of Shengsi island collected from Gaode API to optimize the location planning of process plant and landfill site. For fast converge of the model. we introduced an artificial cuts to the model by constraining the number of landfill sites.
 In case of 1 landfill, ...
 In case of 2 landfill, ...
 ## Discusion
