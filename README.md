@@ -34,7 +34,7 @@ TC,FC: Minimized transportation costs and incorporated fixed costs related to ex
 Therefore, it falls under the category "1/S,P,L/–/TC,FC MIP" model.
 
 ### Scope
-The scope of this research encompasses the applicatioon of open sourced solver like ortools on the MILP model tailored to the specific conditions of shengsi island. This study contributes to the improvement of local waste management practices in Shengsi island. 
+This study refines the solid waste management system on Shengsi Island through a detailed analysis of waste generation, leveraging the actual coordinates of existing waste collection centers and sophisticated geospatial data analysis. Notably, the study employs the Google OR-Tools SAT solver to model and solve the Mixed Integer Linear Programming (MILP) problem, facilitating an innovative approach to estimating waste generation based on the distribution of residential areas.
 ## Methodology
 ### MILP Formulation
 Based on the model developed by Mitropoulos, the MIP location allocation models are as follows.  Because of the limited landspace in Shengsi island, this study didn't consider the requirements of transfer station in this model.
