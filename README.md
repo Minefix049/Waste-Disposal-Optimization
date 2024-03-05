@@ -8,6 +8,24 @@ The area of Shengsi island is 8824 square kilometer.
 ### Objective
 This study aims to address the multi-level locational planning problem of an intergrated waste management system in Shengsi island using MILP(mixed integer linear programming). The objective is to integrate various apsects of waste management, cosidering environmental, economic and logistical factors to propose a comprehensive solution.
 ### Literature Reivew
+
+We categorize them according to the different types of problems. 
+The first category "p" corresponds to the periodicity of the problem: p=1 if there is only one cycle, and p=T if more than one cycle is considered. the second category "s" is related to the network structure, which can be subdivided into four categories:
+C, if we considered the optimal location of the new collection point.
+S, if we considered existing or new transfer stations.
+P, if we evaluated the opening of new processing facilities or the optimization of existing processing facilities.
+L, if we considered existing or new landfill, disposal or market facilities.
+
+The third category "c" describes additional constraints and characteristics of the problem, which can refine the classification again:
+"multiwaste", if we considered multiple types of waste.
+"uncert", if there is uncertainty in waste generation.
+
+The last category "o" represents the optimization objective of this problem:
+TC, if it minimized transportation costs.
+PC, if it consider the processing costs of the facility.
+FC, if it includes fixed costs of operating existing facilities or opening new facilities.
+"multiobj", if we consider multi-objective optimization.
+
 Caruso[1] developed a solid waste management (SWM) planning system comprising three hierarchical levels. This system aimed to efficiently address the complexities of waste management by integrating processes at various stages, from collection to disposal. Through this three-tiered approach, Caruso sought to optimize resource allocation, enhance operational effectiveness, and mitigate environmental impacts associated with waste management practices.
 
 Based on the provided classification system, this can be categorized as follows:
