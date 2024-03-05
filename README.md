@@ -68,3 +68,6 @@ In case of 2 landfill, ...
 ### Comparison with existing solutions
 ### Implications
 Discuss the implications of this finding for policy, practive adn future research.
+
+## Reference
+Ghiani, G., Laganà, D., Manni, E., Musmanno, R., & Vigo, D. (2014). Operations research in solid waste management: A survey of strategic and tactical issues. Computers & Operations Research, 44, 22-32.
