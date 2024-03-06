@@ -87,6 +87,16 @@ This study refines the solid waste management system on Shengsi Island through a
 
 • $CAP_L$: Capacity of landfill
 
+### Decision Variables
+
+• $x_{j,f,g}$: Tons of waste transported from collection center $j$ to treatment plant $f$ for treatment type $g$
+
+• $y_{j,l}$: Tons of waste transported from collection center $j$ to landfill $z$
+
+• $z_{f,l,g}$: Tons of waste transported from treatment plant $f$ to landfill $l$ after processing with treatment type $g$
+
+• $b_{f,g}$: Binary variable indicating if treatment plant $f$ for treatment type $g$ is selected
+
 
 
 ### Objective
