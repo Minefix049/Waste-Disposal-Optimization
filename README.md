@@ -54,6 +54,30 @@ Therefore, it falls under the category "1/S,P,L/–/TC,FC MIP" model.
 ### Scope
 This study refines the solid waste management system on Shengsi Island through a detailed analysis of waste generation, leveraging the actual coordinates of existing waste collection centers and sophisticated geospatial data analysis. Notably, the study employs the Google OR-Tools SAT solver to model and solve the Mixed Integer Linear Programming (MILP) problem, facilitating an innovative approach to estimating waste generation based on the distribution of residential areas.
 ## Methodology
+### Constraints
+• Waste Generation and Allocation Constraint for Each Collection Center:
+
+$\sum_{f\in F}\sum_{g\in G}x_{j,f,g}+\sum_{l\in L}y_{j,l}=W_j\ \ \forall j\in J$
+
+• Treatment Plant Capacity Constraint:
+
+$\sum_{j\in J}x_{j,f,g}\leq CAP_{F,g}·b_{f,g}\ \ \forall f\in F, \forall g \in G$
+
+• Landfill Capacity Constraint:
+
+$\sum_{j\in J}y_{j,l}+\sum_{f \in F}\sum_{g\in G}z_{f,l,g}\leq CAP_L\ \ \forall l\in L$
+
+• Treatment to Landfill Transport:
+
+$z_{f,l,g}=\alpha_{g}·\sum_{j\in J}x_{j,f,g}\ \ \forall f\in F,\forall l\in L,\forall g\in G$
+
+Where $a_g$ is the reduction factor after treatment $g$.
+
+• Binary Treatment Plant Selection:
+
+$b_{f,g}\in\{0,1\}\ \ \forall f\in F,\forall g\in G$
+
+
 ### MILP Formulation
 Based on the model developed by Mitropoulos, the MIP location allocation models are as follows.  Because of the limited landspace in Shengsi island, this study didn't consider the requirements of transfer station in this model.
 ### Data Collection
