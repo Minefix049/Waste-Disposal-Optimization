@@ -57,10 +57,14 @@ This study refines the solid waste management system on Shengsi Island through a
 
 ### Indices and Sets
 •$J$: Set of collection centers
+
 •$K$: Set of transfer stations (not used in this scenario)
+
 •$F$: Set of treatment plant candidates by the seaside
+
 •$L$: Set of landfill candidates
-•$G$: Set of treatment types, $G$ ={"$incinerator$"," $composting$"," $recycling$" }
+
+•$G$: Set of treatment types, $G$ ={"$incinerator$"," $composting$"," $recycling$"}
 
 ### Objective
 
