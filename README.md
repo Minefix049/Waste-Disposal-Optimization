@@ -58,7 +58,9 @@ This study refines the solid waste management system on Shengsi Island through a
 ### Objective
 
 Minimize:
-$\sum_{j\in J}\sum_{f\in F}\sum_{g\in G}C_T·d_{j,f}·x_{j,f,g}+\sum_{j\in J}\sum_{l\in L}C_T·d_{j,l}·y_{j,l}+\sum_{f\in F}\sum_{l\in L}\sum_{g\in G}C_T·d_{f,l}·z_{f,l,g}+\sum_{f\in F}\sum_{g\in G}(C_{F,g}·b_{f,g}+C_{V,g}·x_{j,f,g})+\sum_{j\in J}\sum_{l\in L}C_L·y_{j,l}$
+$\sum_{j\in J}\sum_{f\in F}\sum_{g\in G}C_T·d_{j,f}·x_{j,f,g}+\sum_{j\in J}\sum_{l\in L}C_T·d_{j,l}·y_{j,l}$
+$+\sum_{f\in F}\sum_{l\in L}\sum_{g\in G}C_T·d_{f,l}·z_{f,l,g}$
+$+\sum_{f\in F}\sum_{g\in G}(C_{F,g}·b_{f,g}+C_{V,g}·x_{j,f,g})+\sum_{j\in J}\sum_{l\in L}C_L·y_{j,l}$
 
 ### Constraints
 • Waste Generation and Allocation Constraint for Each Collection Center:
