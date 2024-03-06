@@ -66,6 +66,29 @@ This study refines the solid waste management system on Shengsi Island through a
 
 • $G$ : Set of treatment types, $G$ ={" $incinerator$"," $composting$"," $recycling$"}
 
+### Parameters
+• $d_{j, f}$: Distance from collection center $j$ to treatment plant $f$
+
+• $d_{j,L}$: Distance from collection center $j$ to landfill $l$
+
+• $d_{f,L}$: Distance from treatment plant $f$ to landfill $l$
+
+• $C_T$: Transport cost per unit distance per ton of waste
+
+• $C_{F,g}$: Fixed cost of operating treatment type $g$
+
+• $C_{V,g}$: Variable cost of processing waste at treatment type $g$
+
+• $C_L$: Cost of landfilling per ton of waste
+
+• $W_j$: Waste generated at collection center $j$
+
+• $CAP_{F,g}$: Capacity of treatment plant for treatment type $g$
+
+• $CAP_L$: Capacity of landfill
+
+
+
 ### Objective
 
 Minimize:
