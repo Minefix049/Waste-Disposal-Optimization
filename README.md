@@ -63,14 +63,17 @@ we use polygon serach methods provided by Gaode API to collect the data of wate 
 
 ## Result
 TC: Transportation Cost
+
 transport_cost_vehicle = $7$ yuan/ton*km
 transfer_cost_truck = $30$
 
 FC: Fixed Cost
+
 fixed_treatment_cost = {type: np.random.rand(F) for type in treatment_type}
 fixed_cost_landfill = $135000000$
 
 PC: Process Cost
+
 variable_treatment_cost = {'incinerator':$350$,'composting':$250$,'recycling':$100$}
 variable_cost_landfill = $250$ yuan/ton
 
