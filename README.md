@@ -55,6 +55,13 @@ Therefore, it falls under the category "1/S,P,L/–/TC,FC MIP" model.
 This study refines the solid waste management system on Shengsi Island through a detailed analysis of waste generation, leveraging the actual coordinates of existing waste collection centers and sophisticated geospatial data analysis. Notably, the study employs the Google OR-Tools SAT solver to model and solve the Mixed Integer Linear Programming (MILP) problem, facilitating an innovative approach to estimating waste generation based on the distribution of residential areas.
 ## Methodology
 
+### Indices and Sets
+•$J$: Set of collection centers
+•$K$: Set of transfer stations (not used in this scenario)
+•$F$: Set of treatment plant candidates by the seaside
+•$L$: Set of landfill candidates
+•$G$: Set of treatment types, $G$ ={"$incinerator$"," $composting$"," $recycling$" }
+
 ### Objective
 
 Minimize:
