@@ -9,7 +9,7 @@ The area of Shengsi island is 8824 square kilometer.
 This study aims to address the multi-level locational planning problem of an intergrated waste management system in Shengsi island using MILP(mixed integer linear programming). The objective is to integrate various apsects of waste management, cosidering environmental, economic and logistical factors to propose a comprehensive solution.
 ### Literature Reivew
 
-We categorize them according to the different types of problems. 
+We categorize previous study according to the method provided by Ghiani, G[1]. 
 The first category "p" corresponds to the periodicity of the problem: p=1 if there is only one cycle, and p=T if more than one cycle is considered. the second category "s" is related to the network structure, which can be subdivided into four categories:
 C, if we considered the optimal location of the new collection point.
 S, if we considered existing or new transfer stations.
@@ -26,7 +26,7 @@ PC, if it consider the processing costs of the facility.
 FC, if it includes fixed costs of operating existing facilities or opening new facilities.
 "multiobj", if we consider multi-objective optimization.
 
-Caruso[1] developed a solid waste management (SWM) planning system comprising three hierarchical levels. This system aimed to efficiently address the complexities of waste management by integrating processes at various stages, from collection to disposal. Through this three-tiered approach, Caruso sought to optimize resource allocation, enhance operational effectiveness, and mitigate environmental impacts associated with waste management practices.
+Caruso[2] developed a solid waste management (SWM) planning system comprising three hierarchical levels. This system aimed to efficiently address the complexities of waste management by integrating processes at various stages, from collection to disposal. Through this three-tiered approach, Caruso sought to optimize resource allocation, enhance operational effectiveness, and mitigate environmental impacts associated with waste management practices.
 
 Based on the provided classification system, this can be categorized as follows:
 
@@ -38,7 +38,7 @@ L: Existing Landfill considered.
 TC,FC: Minimized transportation costs and incorporated fixed costs related to existing facility operations or new facility openings,
 Therefore, it falls under the category 1/P,L/multiwaste/TC,FC, multiobj model.
 
-Mitropoulos[2] developed an integrated solid waste management (SWM) system operating across four hierarchical levels at the regional scale. This comprehensive system aimed to address the multifaceted challenges of waste management by incorporating strategic planning, logistical coordination, and sustainable practices at each level. By integrating collection, sorting, treatment, and disposal processes within a regional framework, Mitropoulos aimed to optimize resource utilization, minimize environmental impacts, and enhance the overall efficiency and effectiveness of solid waste management practices within the region.
+Mitropoulos[3] developed an integrated solid waste management (SWM) system operating across four hierarchical levels at the regional scale. This comprehensive system aimed to address the multifaceted challenges of waste management by incorporating strategic planning, logistical coordination, and sustainable practices at each level. By integrating collection, sorting, treatment, and disposal processes within a regional framework, Mitropoulos aimed to optimize resource utilization, minimize environmental impacts, and enhance the overall efficiency and effectiveness of solid waste management practices within the region.
 
 Based on the provided classification system, this can be categorized as follows:
 
@@ -57,27 +57,30 @@ This study refines the solid waste management system on Shengsi Island through a
 
 This study refines the solid waste management system on Shengsi Island through a detailed analysis of waste generation, leveraging the actual coordinates of existing waste collection centers and sophisticated geospatial data analysis. Notably, the study employs the Google OR-Tools SAT solver to model and solve the Mixed Integer Linear Programming (MILP) problem, facilitating an innovative approach to estimating waste generation based on the distribution of residential areas.
 
-### 3.1 Utilizating Existing Collection Centers
+### Geography data collection
+A critical component of our methodology is the collection of accurate and comprehensive data regarding Shengsi island's geography, infrastructure and wate generation patters. To achieve this, we have emplyed the services of Gaode, a leading provider of mapping and location-based services in china. We find out the latitude and longitude coordinates of exisitng collection centers on Gaode Map. We also define the polygons to represent operational coverage areas of each collection centers. Moreover we use polygon serach methods provided by Gaode API to collect the data of residential facilities in each operation coverage area. We also use Gaode API to compute the distance matrix of location candidates.
+
+### Utilizating Existing Collection Centers
 Our methodology is based on utilizating existing waste collection centers on Shengsi Island. We used real coordinates of these centers to accurately divide the island into sectors and making sure that each sector is efficiently served. These sectors are delineated based on the operational coverage of each collection center, using polygon coordinates to define their geographical boundaries precisely.
 
-### 3.2 Collection and Analysis of Residential Area Data
+### Collection and Analysis of Residential Area Data
 The estimation of waste generation begins with a comprehensive collection of data on residential areas within each defined sector. Through the Gaode polygon search API, we gather detailed information on residential units, employing specific keywords to ensure a thorough identification of all relevant residential entities. This method allows for an accurate representation of the residential landscape within each sector.
 
-### 3.3 Estimating Waste Generation with Residential Count Ratios
+### Estimating Waste Generation with Residential Count Ratios
 A key innovation in our methodology is the estimation of waste generation through the ratio of residential counts in each sector. This approach allows for a proportional and realistic assessment of waste production, acknowledging the varying population densities and residential distributions across the island. By correlating the number of residential units to estimated waste output, we offer a nuanced view of waste generation that surpasses traditional, uniform estimations.
 
-### 3.4 collection of distance matrix data
+### collection of distance matrix data
 A critical aspect of our study involved the acquisition of accurate and comprehensive data pertaining to Shengsi Island's geography, infrastructure, and waste generation patterns. This section outlines the methodologies employed to gather the requisite data and the tools utilized for analysis.We utilized Gaode's API to compute distance matrices between potential facility sites and waste generation centroids, employing advanced routing algorithms and geographic data. This enabled us to optimize facility placement, minimizing transportation costs and logistical challenges in designing a solid waste management system for Shengsi Island.
 
-### 3.5 MILP Modeling with Google OR-Tools SAT Solver
+### MILP Modeling with Google OR-Tools SAT Solver
 To support the analytical processes of this study, we employ the Google OR-Tools SAT solver for modeling and solving the MILP problems inherent in estimating waste generation and optimizing collection center operations. This powerful tool enables us to handle complex optimization problems efficiently, providing a robust framework for the strategic planning and management of the island's waste management system. The use of Google OR-Tools SAT solver underpins our methodological approach, enhancing the precision and effectiveness of our waste generation estimates and sector-based management strategies.
 
-### 3.6 Comprehensive Approach for Solid Waste Management Optimization
+### Comprehensive Approach for Solid Waste Management Optimization
 Integrating real-world data on collection centers with advanced modeling and analytical techniques, this study presents a comprehensive approach to optimizing solid waste management on Shengsi Island. By accurately estimating waste generation and employing sophisticated MILP modeling, we lay the groundwork for a more efficient, targeted, and sustainable waste management infrastructure that is finely tuned to the specific needs and characteristics of the island's sectors.
 
 ## Mathematical Formulation
 
-Based on literature review, considering the actual requirements of shengsi island, we decided to use 1/P,L/-/TC,PC,FC MIP model to solve the locational planning of shengsi island. our model can be fourmulated as follow. 
+Based on the modeling method in literature review, considering the actual requirements of shengsi island, we decided to use 1/P,L/-/TC,PC,FC MIP model to solve the locational planning of SWM system in shengsi island. Because of the limited landspace in Shengsi island, this study didn't consider the requirements of transfer station in this model. The model can be fourmulated as follow. 
 
 ### Indices and Sets
 • $J$: Set of collection centers
@@ -153,13 +156,6 @@ Let $L_{max}$ be the maximum number of landfill sites that can be selected for u
 • Landfill Selection Upper Bound Constraint:
 $\sum_{l\in L}u_l\leq L_{max}$
 
-### MILP Formulation
-Based on the model developed by Mitropoulos, the MIP location allocation models are as follows.  Because of the limited landspace in Shengsi island, this study didn't consider the requirements of transfer station in this model.
-
-### Geography data collection
-A critical component of our methodology is the collection of accurate and comprehensive data regarding Shengsi island's geography, infrastructure and wate generation patters. To achieve this, we have emplyed the API services of Gaode, a leading provider of mapping and location-based services in china.
-we use polygon serach methods provided by Gaode API to collect the data of wate generation distribution. We also used Gaode API to compute the distance matrix of location candidates.
-
 ## Result
 
 ### Distance Matrix
@@ -230,4 +226,4 @@ In case of 2 landfill, ...
 Discuss the implications of this finding for policy, practive adn future research.
 
 ## Reference
-Ghiani, G., Laganà, D., Manni, E., Musmanno, R., & Vigo, D. (2014). Operations research in solid waste management: A survey of strategic and tactical issues. Computers & Operations Research, 44, 22-32.
+[1]Ghiani, G., Laganà, D., Manni, E., Musmanno, R., & Vigo, D. (2014). Operations research in solid waste management: A survey of strategic and tactical issues. Computers & Operations Research, 44, 22-32.
