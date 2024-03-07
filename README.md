@@ -59,18 +59,21 @@ This study refines the solid waste management system on Shengsi Island through a
 
 ### 3.1 Utilizating Existing Collection Centers
 Our methodology is based on utilizating existing waste collection centers on Shengsi Island. We used real coordinates of these centers to accurately divide the island into sectors and making sure that each sector is efficiently served. These sectors are delineated based on the operational coverage of each collection center, using polygon coordinates to define their geographical boundaries precisely.
+
 ### 3.2 Collection and Analysis of Residential Area Data
 The estimation of waste generation begins with a comprehensive collection of data on residential areas within each defined sector. Through the Gaode polygon search API, we gather detailed information on residential units, employing specific keywords to ensure a thorough identification of all relevant residential entities. This method allows for an accurate representation of the residential landscape within each sector.
+
 ### 3.3 Estimating Waste Generation with Residential Count Ratios
 A key innovation in our methodology is the estimation of waste generation through the ratio of residential counts in each sector. This approach allows for a proportional and realistic assessment of waste production, acknowledging the varying population densities and residential distributions across the island. By correlating the number of residential units to estimated waste output, we offer a nuanced view of waste generation that surpasses traditional, uniform estimations.
+
 ### 3.4 collection of  distance matrix data
 A critical aspect of our study involved the acquisition of accurate and comprehensive data pertaining to Shengsi Island's geography, infrastructure, and waste generation patterns. This section outlines the methodologies employed to gather the requisite data and the tools utilized for analysis.We utilized Gaode's API to compute distance matrices between potential facility sites and waste generation centroids, employing advanced routing algorithms and geographic data. This enabled us to optimize facility placement, minimizing transportation costs and logistical challenges in designing a solid waste management system for Shengsi Island.
+
 ### 3.5 MILP Modeling with Google OR-Tools SAT Solver
 To support the analytical processes of this study, we employ the Google OR-Tools SAT solver for modeling and solving the MILP problems inherent in estimating waste generation and optimizing collection center operations. This powerful tool enables us to handle complex optimization problems efficiently, providing a robust framework for the strategic planning and management of the island's waste management system. The use of Google OR-Tools SAT solver underpins our methodological approach, enhancing the precision and effectiveness of our waste generation estimates and sector-based management strategies.
+
 ### 3.6 Comprehensive Approach for Solid Waste Management Optimization
 Integrating real-world data on collection centers with advanced modeling and analytical techniques, this study presents a comprehensive approach to optimizing solid waste management on Shengsi Island. By accurately estimating waste generation and employing sophisticated MILP modeling, we lay the groundwork for a more efficient, targeted, and sustainable waste management infrastructure that is finely tuned to the specific needs and characteristics of the island's sectors.
-
-
 
 
 
@@ -161,26 +164,28 @@ we use polygon serach methods provided by Gaode API to collect the data of wate 
 
 ### Distance Matrix
 
-collection_process_distance_matrix：
+#### collection_process_distance_matrix：
 
-| 2851.0 | 2326.0 | 4095.0 | 7257.0 | 14993.0 | 10578.0 |
-| 15151.0 | 12210.0 | 10093.0 | 14769.0 | 2161.0 | 8792.0 |
-| 10110.0 | 10955.0 | 4998.0 | 6027.0 | 11685.0 | 1780.0 |
-| 5505.0 | 2624.0 | 1159.0 | 7555.0 | 12048.0 | 5758.0 |
-| 10495.0 | 6963.0 | 4366.0 | 11548.0 | 8571.0 | 2822.0 |
-| 14075.0 | 10543.0 | 10607.0 | 5615.0 | 16103.0 | 6088.0 |
+| 2851.0  | 2326.0  | 4095.0  | 7257.0  | 14993.0 | 10578.0 |
+|---------|---------|---------|---------|---------|---------|
+| 15151.0 | 12210.0 | 10093.0 | 14769.0 | 2161.0  | 8792.0  |
+| 10110.0 | 10955.0 | 4998.0  | 6027.0  | 11685.0 | 1780.0  |
+| 5505.0  | 2624.0  | 1159.0  | 7555.0  | 12048.0 | 5758.0  |
+| 10495.0 | 6963.0  | 4366.0  | 11548.0 | 8571.0  | 2822.0  |
+| 14075.0 | 10543.0 | 10607.0 | 5615.0  | 16103.0 | 6088.0  |
 
-process_landfill_distance_matrix：
+#### process_landfill_distance_matrix：
 
-| 2851.0 | 2326.0 | 4095.0 | 7257.0 | 14993.0 | 10578.0 |
-| 15151.0 | 12210.0 | 10093.0 | 14769.0 | 2161.0 | 8792.0 |
-| 10110.0 | 10955.0 | 4998.0 | 6027.0 | 11685.0 | 1780.0 |
-| 5505.0 | 2624.0 | 1159.0 | 7555.0 | 12048.0 | 5758.0 |
-| 10495.0 | 6963.0 | 4366.0 | 11548.0 | 8571.0 | 2822.0 |
-| 14075.0 | 10543.0 | 10607.0 | 5615.0 | 16103.0 | 6088.0 |
-
+| 2851.0  | 2326.0  | 4095.0  | 7257.0  | 14993.0 | 10578.0 |
+|---------|---------|---------|---------|---------|---------|
+| 15151.0 | 12210.0 | 10093.0 | 14769.0 | 2161.0  | 8792.0  |
+| 10110.0 | 10955.0 | 4998.0  | 6027.0  | 11685.0 | 1780.0  |
+| 5505.0  | 2624.0  | 1159.0  | 7555.0  | 12048.0 | 5758.0  |
+| 10495.0 | 6963.0  | 4366.0  | 11548.0 | 8571.0  | 2822.0  |
+| 14075.0 | 10543.0 | 10607.0 | 5615.0  | 16103.0 | 6088.0  |
 
 ### Existing collection centers and operational coverage 
+
 | 序号 | Polygon Coordinates                                       | Residential areas count | Waste generation estimation |
 |-----|-----------------------------------------------------------|-------------------------|-----------------------------|
 |  1  | 122.447,30.768 \| 122.474,30.768 \| 122.474,30.743 \| 122.447,30.743 | 25                      | 1202                        |
@@ -206,7 +211,6 @@ PC: Process Cost
 
 variable_treatment_cost = {'incinerator':$350$,'composting':$250$,'recycling':$100$}
 variable_cost_landfill = $250$ yuan/ton
-
 
 
 ![image](https://github.com/Minefix049/Waste-Disposal-Optimization/blob/main/case.png)
