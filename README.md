@@ -53,6 +53,8 @@ Therefore, it falls under the category "1/S,P,L/–/TC,FC MIP" model.
 
 ### Scope
 This study refines the solid waste management system on Shengsi Island through a detailed analysis of waste generation, leveraging the actual coordinates of existing waste collection centers and sophisticated geospatial data analysis. Notably, the study employs the Google OR-Tools SAT solver to model and solve the Mixed Integer Linear Programming (MILP) problem, facilitating an innovative approach to estimating waste generation based on the distribution of residential areas.
+![image](https://github.com/Minefix049/Waste-Disposal-Optimization/blob/main/case.png)
+
 ## Methodology
 
 This study refines the solid waste management system on Shengsi Island through a detailed analysis of waste generation, leveraging the actual coordinates of existing waste collection centers and sophisticated geospatial data analysis. Notably, the study employs the Google OR-Tools SAT solver to model and solve the Mixed Integer Linear Programming (MILP) problem, facilitating an innovative approach to estimating waste generation based on the distribution of residential areas.
@@ -61,7 +63,7 @@ This study refines the solid waste management system on Shengsi Island through a
 A critical component of our methodology is the collection of accurate and comprehensive data regarding Shengsi island's geography, infrastructure and wate generation patters. To achieve this, we have emplyed the services of Gaode, a leading provider of mapping and location-based services in china. We find out the latitude and longitude coordinates of exisitng collection centers on Gaode Map. We also define the polygons to represent operational coverage areas of each collection centers. Moreover we use polygon serach methods provided by Gaode API to collect the data of residential facilities in each operation coverage area. We also use Gaode API to compute the distance matrix of location candidates.
 
 ### Utilizating Existing Collection Centers
-Our methodology is based on utilizating existing waste collection centers on Shengsi Island. We used real coordinates of these centers to accurately divide the island into sectors and making sure that each sector is efficiently served. These sectors are delineated based on the operational coverage of each collection center, using polygon coordinates to define their geographical boundaries precisely.
+Our methodology is based on utilizating existing waste collection centers on Shengsi Island. We use real coordinates of these centers to accurately divide the island into sectors and mak sure that each sector is efficiently served. These sectors are delineated based on the operational coverage of each collection center, using polygon coordinates to define their geographical boundaries precisely.
 
 ### Collection and Analysis of Residential Area Data
 The estimation of waste generation begins with a comprehensive collection of data on residential areas within each defined sector. Through the Gaode polygon search API, we gather detailed information on residential units, employing specific keywords to ensure a thorough identification of all relevant residential entities. This method allows for an accurate representation of the residential landscape within each sector.
@@ -158,6 +160,32 @@ $\sum_{l\in L}u_l\leq L_{max}$
 
 ## Result
 
+This paper utilizes existing waste collection centers on Shengsi Island. We use real coordinates of these centers to divide the island into sectors and mak sure that each sector is efficiently served.   By correlating the number of residential units to estimated waste output, we estimate the waster generation in each sector. The data of existing collection centers and their corresponding operational coverage areas are as follow.
+
+### Existing collection centers and operational coverage areas
+
+| Index | Polygon Coordinates                                       | Residential areas count | Waste generation estimation per year |
+|-----|-----------------------------------------------------------|-------------------------|-----------------------------|
+|  1  | 122.447,30.768 \| 122.474,30.768 \| 122.474,30.743 \| 122.447,30.743 | 25                      | 1202                        |
+|  2  | 122.490,30.725 \| 122.538,30.725 \| 122.538,30.696 \| 122.490,30.696 | 26                      | 1245                        |
+|  3  | 122.423,30.725 \| 122.423,30.689 \| 122.467,30.689 \| 122.467,30.725 | 254                     | 12209                       |
+|  4  | 122.423,30.745 \| 122.447,30.745 \| 122.447,30.743 \| 122.467,30.743 \| 122.467,30.725 \| 122.423,30.725 | 260 | 12498                |
+|  5  | 122.490,30.725 \| 122.467,30.725 \| 122.467,30.696 \| 122.490,30.696 | 87                      | 4182                        |
+|  6  | 122.409,30.689 \| 122.435,30.689 \| 122.435,30.673 \| 122.409,30.673 | 0                       | 0                           |
+
+### Process plant and landfill candidate selection
+We selected several location candidates for both process plant and landfill by considering following criteria.
+
+• Environmental Impact: Candidate locations were chosen to minimize disturbance to inland ecosystems and residential areas. 
+
+• Land Use Efficiency: Sites were selected to avoid conflicts with residential and conservation areas, optimizing land utilization. 
+
+• Energy and Resource Recovery: Coastal locations were preferred to utilize seawater for cooling processes and maximize energy and resource recovery opportunities. 
+
+These criteria ensure the selected locations contribute to sustainable waste management while minimizing environmental impact and maximizing resource efficiency on Shengsi Island.
+
+Need to copy the location candidates overhere!!
+
 ### Distance Matrix
 
 #### collection_process_distance_matrix：
@@ -180,50 +208,26 @@ $\sum_{l\in L}u_l\leq L_{max}$
 | 10495.0 | 6963.0  | 4366.0  | 11548.0 | 8571.0  | 2822.0  |
 | 14075.0 | 10543.0 | 10607.0 | 5615.0  | 16103.0 | 6088.0  |
 
-### Existing collection centers and operational coverage 
-
-| 序号 | Polygon Coordinates                                       | Residential areas count | Waste generation estimation |
-|-----|-----------------------------------------------------------|-------------------------|-----------------------------|
-|  1  | 122.447,30.768 \| 122.474,30.768 \| 122.474,30.743 \| 122.447,30.743 | 25                      | 1202                        |
-|  2  | 122.490,30.725 \| 122.538,30.725 \| 122.538,30.696 \| 122.490,30.696 | 26                      | 1245                        |
-|  3  | 122.423,30.725 \| 122.423,30.689 \| 122.467,30.689 \| 122.467,30.725 | 254                     | 12209                       |
-|  4  | 122.423,30.745 \| 122.447,30.745 \| 122.447,30.743 \| 122.467,30.743 \| 122.467,30.725 \| 122.423,30.725 | 260 | 12498                |
-|  5  | 122.490,30.725 \| 122.467,30.725 \| 122.467,30.696 \| 122.490,30.696 | 87                      | 4182                        |
-|  6  | 122.409,30.689 \| 122.435,30.689 \| 122.435,30.673 \| 122.409,30.673 | 0                       | 0                           |
-
-
-### Process plant and landfill candidate selection
-
-Environmental Impact: Candidate locations were chosen to minimize disturbance to inland ecosystems and residential areas. 
-Land Use Efficiency: Sites were selected to avoid conflicts with residential and conservation areas, optimizing land utilization. 
-Energy and Resource Recovery: Coastal locations were preferred to utilize seawater for cooling processes and maximize energy and resource recovery opportunities. 
-
-These criteria ensure the selected locations contribute to sustainable waste management while minimizing environmental impact and maximizing resource efficiency on Shengsi Island.
-
-TC: Transportation Cost
-
-transport_cost_vehicle = $7$ yuan/ton*km
-transfer_cost_truck = $30$
-
-FC: Fixed Cost
-
-fixed_treatment_cost = {type: np.random.rand(F) for type in treatment_type}
-fixed_cost_landfill = $135000000$
-
-PC: Process Cost
-
+### Model Parameters
+#### Cost Parameters
+This sector introduces the various cost parameters and constraint parameters in the optimization models. The cost parameters can be divided into several categoris.
+•  Processing Cost:  The variable treatment cost of incinerator is $350$ yuan/ton, ...
 variable_treatment_cost = {'incinerator':$350$,'composting':$250$,'recycling':$100$}
 variable_cost_landfill = $250$ yuan/ton
+•  Transportation Cost: The transportation cost of vehicles running between collection centers and processing plants is  $7$ yuan/ton*km. The transportation cost of trucks running between processing plants and landfill sites is $30$ yuan/ton*km
+•  Fixed Cost: The fixed cost to invest an incinerator treatplant is  $135000000$. Cosidering its lifecycle expanding 100 years. the fixed cost each year is  $1350000$ then. 
+fixed_treatment_cost =
+{type: np.random.rand(F) for type in treatment_type} fixed_cost_landfill = $135000000$
+#### Operation Constraints
+FLOW_UPPERBOUND = 4000
+LANDFILL_CAPACITY_LOWERBOUND = 0
+LANDFIll_CAPACITY_UPPERBOUND = 21000
+TREATMENT_CAPACITY_LOWERBOUND = 100
+TREATMENT_CAPACITY_UPPERBOUND = 1000
 
-
-![image](https://github.com/Minefix049/Waste-Disposal-Optimization/blob/main/case.png)
-This study used the data of Shengsi island collected from Gaode API to optimize the location planning of process plant and landfill site. For fast converge of the model. we introduced an artificial cuts to the model by constraining the number of landfill sites.
-In case of 1 landfill, ...
-In case of 2 landfill, ...
 ## Discusion
-### Comparison with existing solutions
-### Implications
-Discuss the implications of this finding for policy, practive adn future research.
+In case of 1 landfill site, ...
+In case of 2 landfill site, ...
 
 ## Reference
 [1]Ghiani, G., Laganà, D., Manni, E., Musmanno, R., & Vigo, D. (2014). Operations research in solid waste management: A survey of strategic and tactical issues. Computers & Operations Research, 44, 22-32.
