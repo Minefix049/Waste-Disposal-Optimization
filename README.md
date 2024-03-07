@@ -61,7 +61,7 @@ This study refines the solid waste management system on Shengsi Island through a
 A critical component of our methodology is the collection of accurate and comprehensive data regarding Shengsi island's geography, infrastructure and wate generation patters. To achieve this, we have emplyed the services of Gaode, a leading provider of mapping and location-based services in china. We find out the latitude and longitude coordinates of exisitng collection centers on Gaode Map. We also define the polygons to represent operational coverage areas of each collection centers. Moreover we use polygon serach methods provided by Gaode API to collect the data of residential facilities in each operation coverage area. We also use Gaode API to compute the distance matrix of location candidates.
 
 ### Utilizating Existing Collection Centers
-Our methodology is based on utilizating existing waste collection centers on Shengsi Island. We used real coordinates of these centers to accurately divide the island into sectors and making sure that each sector is efficiently served. These sectors are delineated based on the operational coverage of each collection center, using polygon coordinates to define their geographical boundaries precisely.
+Our methodology is based on utilizating existing waste collection centers on Shengsi Island. We use real coordinates of these centers to accurately divide the island into sectors and mak sure that each sector is efficiently served. These sectors are delineated based on the operational coverage of each collection center, using polygon coordinates to define their geographical boundaries precisely.
 
 ### Collection and Analysis of Residential Area Data
 The estimation of waste generation begins with a comprehensive collection of data on residential areas within each defined sector. Through the Gaode polygon search API, we gather detailed information on residential units, employing specific keywords to ensure a thorough identification of all relevant residential entities. This method allows for an accurate representation of the residential landscape within each sector.
@@ -158,6 +158,27 @@ $\sum_{l\in L}u_l\leq L_{max}$
 
 ## Result
 
+This paper utilizes existing waste collection centers on Shengsi Island. We use real coordinates of these centers to divide the island into sectors and mak sure that each sector is efficiently served.   By correlating the number of residential units to estimated waste output, we estimate the waster generation in each sector. The data of existing collection centers and their corresponding operational coverage areas are as follow.
+
+### Existing collection centers and operational coverage areas
+
+| Index | Polygon Coordinates                                       | Residential areas count | Waste generation estimation |
+|-----|-----------------------------------------------------------|-------------------------|-----------------------------|
+|  1  | 122.447,30.768 \| 122.474,30.768 \| 122.474,30.743 \| 122.447,30.743 | 25                      | 1202                        |
+|  2  | 122.490,30.725 \| 122.538,30.725 \| 122.538,30.696 \| 122.490,30.696 | 26                      | 1245                        |
+|  3  | 122.423,30.725 \| 122.423,30.689 \| 122.467,30.689 \| 122.467,30.725 | 254                     | 12209                       |
+|  4  | 122.423,30.745 \| 122.447,30.745 \| 122.447,30.743 \| 122.467,30.743 \| 122.467,30.725 \| 122.423,30.725 | 260 | 12498                |
+|  5  | 122.490,30.725 \| 122.467,30.725 \| 122.467,30.696 \| 122.490,30.696 | 87                      | 4182                        |
+|  6  | 122.409,30.689 \| 122.435,30.689 \| 122.435,30.673 \| 122.409,30.673 | 0                       | 0                           |
+
+### Process plant and landfill candidate selection
+We selected several location candidates for both process plant and landfill by considering following criteria.
+Environmental Impact: Candidate locations were chosen to minimize disturbance to inland ecosystems and residential areas. 
+Land Use Efficiency: Sites were selected to avoid conflicts with residential and conservation areas, optimizing land utilization. 
+Energy and Resource Recovery: Coastal locations were preferred to utilize seawater for cooling processes and maximize energy and resource recovery opportunities. 
+
+These criteria ensure the selected locations contribute to sustainable waste management while minimizing environmental impact and maximizing resource efficiency on Shengsi Island.
+
 ### Distance Matrix
 
 #### collection_process_distance_matrix：
@@ -180,25 +201,7 @@ $\sum_{l\in L}u_l\leq L_{max}$
 | 10495.0 | 6963.0  | 4366.0  | 11548.0 | 8571.0  | 2822.0  |
 | 14075.0 | 10543.0 | 10607.0 | 5615.0  | 16103.0 | 6088.0  |
 
-### Existing collection centers and operational coverage 
-
-| 序号 | Polygon Coordinates                                       | Residential areas count | Waste generation estimation |
-|-----|-----------------------------------------------------------|-------------------------|-----------------------------|
-|  1  | 122.447,30.768 \| 122.474,30.768 \| 122.474,30.743 \| 122.447,30.743 | 25                      | 1202                        |
-|  2  | 122.490,30.725 \| 122.538,30.725 \| 122.538,30.696 \| 122.490,30.696 | 26                      | 1245                        |
-|  3  | 122.423,30.725 \| 122.423,30.689 \| 122.467,30.689 \| 122.467,30.725 | 254                     | 12209                       |
-|  4  | 122.423,30.745 \| 122.447,30.745 \| 122.447,30.743 \| 122.467,30.743 \| 122.467,30.725 \| 122.423,30.725 | 260 | 12498                |
-|  5  | 122.490,30.725 \| 122.467,30.725 \| 122.467,30.696 \| 122.490,30.696 | 87                      | 4182                        |
-|  6  | 122.409,30.689 \| 122.435,30.689 \| 122.435,30.673 \| 122.409,30.673 | 0                       | 0                           |
-
-
-### Process plant and landfill candidate selection
-
-Environmental Impact: Candidate locations were chosen to minimize disturbance to inland ecosystems and residential areas. 
-Land Use Efficiency: Sites were selected to avoid conflicts with residential and conservation areas, optimizing land utilization. 
-Energy and Resource Recovery: Coastal locations were preferred to utilize seawater for cooling processes and maximize energy and resource recovery opportunities. 
-
-These criteria ensure the selected locations contribute to sustainable waste management while minimizing environmental impact and maximizing resource efficiency on Shengsi Island.
+### Cost Parameters
 
 TC: Transportation Cost
 
