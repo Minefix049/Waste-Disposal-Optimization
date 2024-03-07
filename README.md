@@ -55,6 +55,25 @@ Therefore, it falls under the category "1/S,P,L/–/TC,FC MIP" model.
 This study refines the solid waste management system on Shengsi Island through a detailed analysis of waste generation, leveraging the actual coordinates of existing waste collection centers and sophisticated geospatial data analysis. Notably, the study employs the Google OR-Tools SAT solver to model and solve the Mixed Integer Linear Programming (MILP) problem, facilitating an innovative approach to estimating waste generation based on the distribution of residential areas.
 ## Methodology
 
+This study refines the solid waste management system on Shengsi Island through a detailed analysis of waste generation, leveraging the actual coordinates of existing waste collection centers and sophisticated geospatial data analysis. Notably, the study employs the Google OR-Tools SAT solver to model and solve the Mixed Integer Linear Programming (MILP) problem, facilitating an innovative approach to estimating waste generation based on the distribution of residential areas.
+
+### 3.1 Utilizating Existing Collection Centers
+Our methodology is based on utilizating existing waste collection centers on Shengsi Island. We used real coordinates of these centers to accurately divide the island into sectors and making sure that each sector is efficiently served. These sectors are delineated based on the operational coverage of each collection center, using polygon coordinates to define their geographical boundaries precisely.
+### 3.2 Collection and Analysis of Residential Area Data
+The estimation of waste generation begins with a comprehensive collection of data on residential areas within each defined sector. Through the Gaode polygon search API, we gather detailed information on residential units, employing specific keywords to ensure a thorough identification of all relevant residential entities. This method allows for an accurate representation of the residential landscape within each sector.
+### 3.3 Estimating Waste Generation with Residential Count Ratios
+A key innovation in our methodology is the estimation of waste generation through the ratio of residential counts in each sector. This approach allows for a proportional and realistic assessment of waste production, acknowledging the varying population densities and residential distributions across the island. By correlating the number of residential units to estimated waste output, we offer a nuanced view of waste generation that surpasses traditional, uniform estimations.
+### 3.4 collection of  distance matrix data
+A critical aspect of our study involved the acquisition of accurate and comprehensive data pertaining to Shengsi Island's geography, infrastructure, and waste generation patterns. This section outlines the methodologies employed to gather the requisite data and the tools utilized for analysis.We utilized Gaode's API to compute distance matrices between potential facility sites and waste generation centroids, employing advanced routing algorithms and geographic data. This enabled us to optimize facility placement, minimizing transportation costs and logistical challenges in designing a solid waste management system for Shengsi Island.
+### 3.5 MILP Modeling with Google OR-Tools SAT Solver
+To support the analytical processes of this study, we employ the Google OR-Tools SAT solver for modeling and solving the MILP problems inherent in estimating waste generation and optimizing collection center operations. This powerful tool enables us to handle complex optimization problems efficiently, providing a robust framework for the strategic planning and management of the island's waste management system. The use of Google OR-Tools SAT solver underpins our methodological approach, enhancing the precision and effectiveness of our waste generation estimates and sector-based management strategies.
+### 3.6 Comprehensive Approach for Solid Waste Management Optimization
+Integrating real-world data on collection centers with advanced modeling and analytical techniques, this study presents a comprehensive approach to optimizing solid waste management on Shengsi Island. By accurately estimating waste generation and employing sophisticated MILP modeling, we lay the groundwork for a more efficient, targeted, and sustainable waste management infrastructure that is finely tuned to the specific needs and characteristics of the island's sectors.
+
+
+
+
+
 Based on literature review, considering the actual requirements of shengsi island, we decided to use 1/P,L/-/TC,PC,FC MIP model to solve the locational planning of shengsi island. our model can be fourmulated as follow. 
 
 ### Indices and Sets
