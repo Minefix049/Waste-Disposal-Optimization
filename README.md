@@ -211,14 +211,14 @@ Need to copy the location candidates overhere!!
 ### Model Parameters
 #### Cost Parameters
 This sector introduces the various cost parameters and constraint parameters in the optimization models. The cost parameters can be divided into several categoris.
-•  Processing Cost:  The variable treatment cost of incinerator is $350$ yuan/ton, ...
-variable_treatment_cost = {'incinerator':$350$,'composting':$250$,'recycling':$100$}
-variable_cost_landfill = $250$ yuan/ton
-•  Transportation Cost: The transportation cost of vehicles running between collection centers and processing plants is  $7$ yuan/ton*km. The transportation cost of trucks running between processing plants and landfill sites is $30$ yuan/ton*km
-•  Fixed Cost: The fixed cost to invest an incinerator treatplant is  $135000000$. Cosidering its lifecycle expanding 100 years. the fixed cost each year is  $1350000$ then. 
-fixed_treatment_cost =
-{type: np.random.rand(F) for type in treatment_type} fixed_cost_landfill = $135000000$
+•  Processing Cost:  The variable treatment cost of incinerator is $350$ yuan/ton, while for composting is $250$ yuan/ton and $100$ yuan/ton for recycling plants. The variable treatment of landfill is $250$ yuan/ton.
+
+•  Transportation Cost: The transportation cost of vehicles running between collection centers and processing plants is $7$ yuan/ton * km. The transportation cost of trucks running between processing plants and landfill sites is $30$ yuan/ton * km.
+•  Fixed Cost: The fixed cost to invest an incinerator treatplant is $135000000$ yuan. Cosidering its lifecycle expanding 100 years, the fixed cost each year is $1350000$ yuan then. 
+  The fixed cost to invest an composting treatplant is $200000000$ yuan. Considering its lifecycle expanding 100 years, the fixed cost each year is $2000000$ yuan then.
+
 #### Operation Constraints
+
 FLOW_UPPERBOUND = 4000
 LANDFILL_CAPACITY_LOWERBOUND = 0
 LANDFIll_CAPACITY_UPPERBOUND = 21000
@@ -231,3 +231,4 @@ In case of 2 landfill site, ...
 
 ## Reference
 [1]Ghiani, G., Laganà, D., Manni, E., Musmanno, R., & Vigo, D. (2014). Operations research in solid waste management: A survey of strategic and tactical issues. Computers & Operations Research, 44, 22-32.
+Aleluia, J., Ferrão, P. Assessing the costs of municipal solid waste treatment technologies in developing Asian countries. Waste Management (2017)
