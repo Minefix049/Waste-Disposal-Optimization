@@ -196,6 +196,13 @@ we use polygon serach methods provided by Gaode API to collect the data of wate 
 |  6  | 122.409,30.689 \| 122.435,30.689 \| 122.435,30.673 \| 122.409,30.673 | 0                       | 0                           |
 |Total|                                                           | 652                     | 32636                       |
 
+### Process plant and landfill candidate selection
+
+Environmental Impact: Candidate locations were chosen to minimize disturbance to inland ecosystems and residential areas. 
+Land Use Efficiency: Sites were selected to avoid conflicts with residential and conservation areas, optimizing land utilization. 
+Energy and Resource Recovery: Coastal locations were preferred to utilize seawater for cooling processes and maximize energy and resource recovery opportunities. 
+
+These criteria ensure the selected locations contribute to sustainable waste management while minimizing environmental impact and maximizing resource efficiency on Shengsi Island.
 
 TC: Transportation Cost
 
