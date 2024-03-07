@@ -66,7 +66,7 @@ The estimation of waste generation begins with a comprehensive collection of dat
 ### 3.3 Estimating Waste Generation with Residential Count Ratios
 A key innovation in our methodology is the estimation of waste generation through the ratio of residential counts in each sector. This approach allows for a proportional and realistic assessment of waste production, acknowledging the varying population densities and residential distributions across the island. By correlating the number of residential units to estimated waste output, we offer a nuanced view of waste generation that surpasses traditional, uniform estimations.
 
-### 3.4 collection of  distance matrix data
+### 3.4 collection of distance matrix data
 A critical aspect of our study involved the acquisition of accurate and comprehensive data pertaining to Shengsi Island's geography, infrastructure, and waste generation patterns. This section outlines the methodologies employed to gather the requisite data and the tools utilized for analysis.We utilized Gaode's API to compute distance matrices between potential facility sites and waste generation centroids, employing advanced routing algorithms and geographic data. This enabled us to optimize facility placement, minimizing transportation costs and logistical challenges in designing a solid waste management system for Shengsi Island.
 
 ### 3.5 MILP Modeling with Google OR-Tools SAT Solver
@@ -75,7 +75,7 @@ To support the analytical processes of this study, we employ the Google OR-Tools
 ### 3.6 Comprehensive Approach for Solid Waste Management Optimization
 Integrating real-world data on collection centers with advanced modeling and analytical techniques, this study presents a comprehensive approach to optimizing solid waste management on Shengsi Island. By accurately estimating waste generation and employing sophisticated MILP modeling, we lay the groundwork for a more efficient, targeted, and sustainable waste management infrastructure that is finely tuned to the specific needs and characteristics of the island's sectors.
 
-
+## Mathematical Formulation
 
 Based on literature review, considering the actual requirements of shengsi island, we decided to use 1/P,L/-/TC,PC,FC MIP model to solve the locational planning of shengsi island. our model can be fourmulated as follow. 
 
@@ -155,10 +155,10 @@ $\sum_{l\in L}u_l\leq L_{max}$
 
 ### MILP Formulation
 Based on the model developed by Mitropoulos, the MIP location allocation models are as follows.  Because of the limited landspace in Shengsi island, this study didn't consider the requirements of transfer station in this model.
-### Data Collection
+
+### Geography data collection
 A critical component of our methodology is the collection of accurate and comprehensive data regarding Shengsi island's geography, infrastructure and wate generation patters. To achieve this, we have emplyed the API services of Gaode, a leading provider of mapping and location-based services in china.
 we use polygon serach methods provided by Gaode API to collect the data of wate generation distribution. We also used Gaode API to compute the distance matrix of location candidates.
-## Computational study
 
 ## Result
 
