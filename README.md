@@ -55,6 +55,8 @@ Therefore, it falls under the category "1/S,P,L/–/TC,FC MIP" model.
 This study refines the solid waste management system on Shengsi Island through a detailed analysis of waste generation, leveraging the actual coordinates of existing waste collection centers and sophisticated geospatial data analysis. Notably, the study employs the Google OR-Tools SAT solver to model and solve the Mixed Integer Linear Programming (MILP) problem, facilitating an innovative approach to estimating waste generation based on the distribution of residential areas.
 ## Methodology
 
+Based on literature review, considering the actual requirements of shengsi island, we decided to use 1/P,L/-/TC,PC,FC MIP model to solve the locational planning of shengsi island. our model can be fourmulated as follow. 
+
 ### Indices and Sets
 • $J$: Set of collection centers
 
@@ -137,6 +139,25 @@ we use polygon serach methods provided by Gaode API to collect the data of wate 
 ## Computational study
 
 ## Result
+
+### Distance Matrix
+
+collection_process_distance_matrix：
+| 2851.0 | 2326.0 | 4095.0 | 7257.0 | 14993.0 | 10578.0 |
+| 15151.0 | 12210.0 | 10093.0 | 14769.0 | 2161.0 | 8792.0 |
+| 10110.0 | 10955.0 | 4998.0 | 6027.0 | 11685.0 | 1780.0 |
+| 5505.0 | 2624.0 | 1159.0 | 7555.0 | 12048.0 | 5758.0 |
+| 10495.0 | 6963.0 | 4366.0 | 11548.0 | 8571.0 | 2822.0 |
+| 14075.0 | 10543.0 | 10607.0 | 5615.0 | 16103.0 | 6088.0 |
+
+process_landfill_distance_matrix：
+| 2851.0 | 2326.0 | 4095.0 | 7257.0 | 14993.0 | 10578.0 |
+| 15151.0 | 12210.0 | 10093.0 | 14769.0 | 2161.0 | 8792.0 |
+| 10110.0 | 10955.0 | 4998.0 | 6027.0 | 11685.0 | 1780.0 |
+| 5505.0 | 2624.0 | 1159.0 | 7555.0 | 12048.0 | 5758.0 |
+| 10495.0 | 6963.0 | 4366.0 | 11548.0 | 8571.0 | 2822.0 |
+| 14075.0 | 10543.0 | 10607.0 | 5615.0 | 16103.0 | 6088.0 |
+
 
 ### Existing collection centers and operational coverage 
 | 序号 | Polygon Coordinates                                       | Residential areas count | Waste generation estimation |
