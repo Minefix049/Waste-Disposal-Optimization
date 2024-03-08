@@ -189,7 +189,7 @@ This paper utilizes existing waste collection centers on Shengsi Island. We use 
 
 ### Existing collection centers and operational coverage areas
 
-| Index | Polygon Coordinates                                       | Residential areas count | Waste generation estimation per year |
+| Index | Polygon Coordinates                                       | Residential areas count | Waste generation estimation per year(ton) |
 |-----|-----------------------------------------------------------|-------------------------|-----------------------------|
 |  1  | 122.447,30.768 \| 122.474,30.768 \| 122.474,30.743 \| 122.447,30.743 | 25                      | 1202                        |
 |  2  | 122.490,30.725 \| 122.538,30.725 \| 122.538,30.696 \| 122.490,30.696 | 26                      | 1245                        |
