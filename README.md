@@ -105,6 +105,10 @@ To support the analytical processes of this study, we employ the Google OR-Tools
 ### Comprehensive Approach for Solid Waste Management Optimization
 Integrating real-world data on collection centers with advanced modeling and analytical techniques, this study presents a comprehensive approach to optimizing solid waste management on Shengsi Island. By accurately estimating waste generation and employing sophisticated MILP modeling, we lay the groundwork for a more efficient, targeted, and sustainable waste management infrastructure that is finely tuned to the specific needs and characteristics of the island's sectors.
 
+### Residue Rate
+
+The reduction factor, representing the residue rate, signifies the proportion of material remaining after waste processing methods such as incineration (10%), composting (20%), and recycling (30%). It serves as a critical parameter in evaluating the efficiency of these processes and determining the extent of waste reduction achieved through them.
+
 ## Mathematical Formulation
 
 Based on the modeling method in literature review, considering the actual requirements of shengsi island, we decided to use 1/P,L/-/TC,PC,FC MIP model to solve the locational planning of SWM system in shengsi island. Because of the limited landspace in Shengsi island, this study didn't consider the requirements of transfer station in this model. The model can be fourmulated as follow. 
