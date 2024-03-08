@@ -260,36 +260,28 @@ This sector introduces the various cost parameters and constraint parameters in 
 
 #### Operation Constraints
 
-Waste transportation flow:
-The upperbound for waste transportation flow shoule be about 4000 tons of trash per day according to China's national policy of 2025.
+This paper considers multiple constrains not only as  feasibility guarantees, but also as cutting planes. These constraints are as follow.
 
-Landfill Capacity:
-The bounds for landfill capacity, ranging from a lower limit of 0 to an upper limit of 11,000 tons, are established based on insights from the study by Kollikkathara, Feng, and Yu (2010).
+•  Landfill Capacity: The bounds for landfill capacity, ranging from a lower limit of 0 to an upper limit of 11,000 tons, are established based on insights from the study by Kollikkathara, Feng, and Yu[4].
 
-Compost Capacity:
-Compost capacity is governed by lower and upper bounds of 100 tons and 600 tons per day, respectively, drawn from the research findings presented by Aleluia and Ferrão (2017).
+•  Compost Capacity: Compost capacity is governed by lower and upper bounds of 100 tons and 600 tons per day, respectively, drawn from the research findings presented by Aleluia and Ferrão [5].
 
-Incineration Capacity:
-The lower and upper bounds for incineration capacity, set at 100 tons and 390 tons per day, respectively, are derived from the investigations detailed in the study by Aleluia and Ferrão (2017).
+•  Incineration Capacity: The lower and upper bounds for incineration capacity, set at 100 tons and 390 tons per day, respectively, are derived from the investigations detailed in the study by Aleluia and Ferrão [6].
 
-```python
-FLOW_UPPERBOUND = 4000
-LANDFILL_CAPACITY_LOWERBOUND = 0
-LANDFIll_CAPACITY_UPPERBOUND = 11000
-COMPOST_CAPACITY_LOWERBOUND = 100
-COMPOST_CAPACITY_UPPERBOUND = 600
-INCINERATION_CAPACITY_LOWERBOUND = 100
-INCINERATION_CAPACITY_UPPERBOUND = 390
-```
+•  Recycing Capacity: The lower and upper bounds for incineration capacity, set at 100 tons and 500 tons per day, respectively, are derived from the investigations detailed in the study by Aleluia and Ferrão [6].
 
-## Discusion
+## Computational Result
 In case of 1 landfill site, ...
 In case of 2 landfill site, ...
 
 ## Reference
 [1]Ghiani, G., Laganà, D., Manni, E., Musmanno, R., & Vigo, D. (2014). Operations research in solid waste management: A survey of strategic and tactical issues. Computers & Operations Research, 44, 22-32.
-Aleluia, J., Ferrão, P. Assessing the costs of municipal solid waste treatment technologies in developing Asian countries. Waste Management (2017)
-Mitropoulos, P., Giannikos, I., & Mitropoulos, I. (2009). Exact and heuristic approaches for the locational planning of an integrated solid waste management system. Operational Research, 9, 329-347.
-Caruso, C., Colorni, A., & Paruccini, M. (1993). The regional urban solid waste management system: A modelling approach. European journal of operational research, 70(1), 16-30.
-Kollikkathara, N., Feng, H., & Yu, D. (2010). A system dynamic modeling approach for evaluating municipal solid waste generation, landfill capacity and related cost management issues. Waste management, 30(11), 2194-2203.
+
+[2]Caruso, C., Colorni, A., & Paruccini, M. (1993). The regional urban solid waste management system: A modelling approach. European journal of operational research, 70(1), 16-30.
+
+[3]Mitropoulos, P., Giannikos, I., & Mitropoulos, I. (2009). Exact and heuristic approaches for the locational planning of an integrated solid waste management system. Operational Research, 9, 329-347.
+
+[4]Kollikkathara, N., Feng, H., & Yu, D. (2010). A system dynamic modeling approach for evaluating municipal solid waste generation, landfill capacity and related cost management issues. Waste management, 30(11), 2194-2203.
+
+[5]Aleluia, J., Ferrão, P. Assessing the costs of municipal solid waste treatment technologies in developing Asian countries. Waste Management (2017)
 
