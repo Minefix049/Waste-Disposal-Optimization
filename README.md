@@ -45,11 +45,17 @@ Caruso[2] developed a solid waste management (SWM) planning system comprising th
 Based on the provided classification system, this can be categorized as follows:
 
 p: Single period.
+
 s: No specific subfields mentioned.
+
 c: No additional constraints or characteristics specified.
+
 o: No specific optimization objectives mentioned.
+
 L: Existing Landfill considered.
+
 TC,FC: Minimized transportation costs and incorporated fixed costs related to existing facility operations or new facility openings,
+
 Therefore, it falls under the category 1/P,L/multiwaste/TC,FC, multiobj model.
 
 Mitropoulos[3] developed an integrated solid waste management (SWM) system operating across four hierarchical levels at the regional scale. This comprehensive system aimed to address the multifaceted challenges of waste management by incorporating strategic planning, logistical coordination, and sustainable practices at each level. By integrating collection, sorting, treatment, and disposal processes within a regional framework, Mitropoulos aimed to optimize resource utilization, minimize environmental impacts, and enhance the overall efficiency and effectiveness of solid waste management practices within the region.
@@ -57,10 +63,15 @@ Mitropoulos[3] developed an integrated solid waste management (SWM) system opera
 Based on the provided classification system, this can be categorized as follows:
 
 p: Single period.
+
 s: It includes C and L, indicating consideration of optimal locations for new collection points and existing or new landfill, disposal, or market facilities.
+
 c: No additional constraints or characteristics are mentioned.
+
 o: No specific optimization objectives are mentioned.
+
 S,P,L: Transfer stations, Processing plant, Landfill considered.
+
 TC,FC: Minimized transportation costs and incorporated fixed costs related to existing facility operations or new facility openings,
 
 Therefore, it falls under the category "1/S,P,L/–/TC,FC MIP" model.
