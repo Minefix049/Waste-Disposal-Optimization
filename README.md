@@ -209,7 +209,17 @@ We selected several location candidates for both process plant and landfill by c
 
 These criteria ensure the selected locations contribute to sustainable waste management while minimizing environmental impact and maximizing resource efficiency on Shengsi Island.
 
-Need to copy the location candidates overhere!!
+Here's the coordinate of candidate we selected.
+
+| ID  | Coordinates       |
+|-----|-------------------|
+| 1   | 122.467, 30.752  |
+| 2   | 122.440, 30.740  |
+| 3   | 122.464, 30.729  |
+| 4   | 122.442, 30.712  |
+| 5   | 122.533, 30.703  |
+| 6   | 122.463, 30.692  |
+
 
 ### Distance Matrix
 
