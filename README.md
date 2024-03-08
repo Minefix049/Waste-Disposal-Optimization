@@ -245,9 +245,11 @@ These matrices support waste disposal planning, aiding decision-makers in strate
 ### Model Parameters
 #### Cost Parameters
 This sector introduces the various cost parameters and constraint parameters in the optimization models. The cost parameters can be divided into several categoris.
+
 •  Processing Cost:  The variable treatment cost of incinerator is $350$ yuan/ton, while for composting is $250$ yuan/ton and $100$ yuan/ton for recycling plants. The variable treatment of landfill is $250$ yuan/ton.
 
 •  Transportation Cost: The transportation cost of vehicles running between collection centers and processing plants is $7$ yuan/ton * km. The transportation cost of trucks running between processing plants and landfill sites is $30$ yuan/ton * km.
+
 •  Fixed Cost: The fixed cost to invest an incinerator treatplant is $135000000$ yuan. Cosidering its lifecycle expanding 100 years, the fixed cost each year is $1350000$ yuan then. 
   The fixed cost to invest an composting treatplant is $200000000$ yuan. Considering its lifecycle expanding 100 years, the fixed cost each year is $2000000$ yuan then.
 
