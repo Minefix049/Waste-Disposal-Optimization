@@ -242,12 +242,19 @@ This sector introduces the various cost parameters and constraint parameters in 
 
 #### Operation Constraints
 
-Landfill Capacity: The bounds for landfill capacity, ranging from a lower limit of 0 to an upper limit of 11,000, are established based on insights from research. 
+Waste transportation flow:
+The upperbound for waste transportation flow shoule be about 4000 tons of trash per day according to China's national policy of 2025.
 
-Compost Capacity: Compost capacity is governed by lower and upper bounds of 100 and 600, respectively, drawn from research findings. 
+Landfill Capacity:
+The bounds for landfill capacity, ranging from a lower limit of 0 to an upper limit of 11,000 tons, are established based on insights from the study by Kollikkathara, Feng, and Yu (2010).
 
-Incineration Capacity: The lower and upper bounds for incineration capacity, set at 100 and 390, respectively, are derived from research investigations.
+Compost Capacity:
+Compost capacity is governed by lower and upper bounds of 100 tons and 600 tons per day, respectively, drawn from the research findings presented by Aleluia and Ferrão (2017).
 
+Incineration Capacity:
+The lower and upper bounds for incineration capacity, set at 100 tons and 390 tons per day, respectively, are derived from the investigations detailed in the study by Aleluia and Ferrão (2017).
+
+```python
 FLOW_UPPERBOUND = 4000
 LANDFILL_CAPACITY_LOWERBOUND = 0
 LANDFIll_CAPACITY_UPPERBOUND = 11000
@@ -255,6 +262,7 @@ COMPOST_CAPACITY_LOWERBOUND = 100
 COMPOST_CAPACITY_UPPERBOUND = 600
 INCINERATION_CAPACITY_LOWERBOUND = 100
 INCINERATION_CAPACITY_UPPERBOUND = 390
+```
 
 ## Discusion
 In case of 1 landfill site, ...
