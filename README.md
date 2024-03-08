@@ -188,7 +188,16 @@ Need to copy the location candidates overhere!!
 
 ### Distance Matrix
 
-#### collection_process_distance_matrix：
+We planned waste routes using Gaode API, obtaining two crucial distance matrices. We selected Strategy 13 - No Highway- to plan the route in case of considering city capacity. By inputting waste processing points' coordinates, we obtained shortest path distances, forming matrices. 
+
+The Waste Collection Distance Matrix illustrates straight-line distances between processing points. 
+
+The Landfill Processing Plant Distance Matrix shows distances from processing points to the landfill. 
+
+These matrices support waste disposal planning, aiding decision-makers in strategy formulation and route optimization for enhanced efficiency and environmental sustainability.
+
+
+#### Waste Collection Distance Matrix：
 
 | 2851.0  | 2326.0  | 4095.0  | 7257.0  | 14993.0 | 10578.0 |
 |---------|---------|---------|---------|---------|---------|
@@ -198,7 +207,7 @@ Need to copy the location candidates overhere!!
 | 10495.0 | 6963.0  | 4366.0  | 11548.0 | 8571.0  | 2822.0  |
 | 14075.0 | 10543.0 | 10607.0 | 5615.0  | 16103.0 | 6088.0  |
 
-#### process_landfill_distance_matrix：
+#### Landfill Processing Plant Distance Matrix：
 
 | 2851.0  | 2326.0  | 4095.0  | 7257.0  | 14993.0 | 10578.0 |
 |---------|---------|---------|---------|---------|---------|
