@@ -266,13 +266,32 @@ This paper considers multiple constrains not only as  feasibility guarantees, bu
 
 •  Compost Capacity: Compost capacity is governed by lower and upper bounds of 100 tons and 600 tons per day, respectively, drawn from the research findings presented by Aleluia and Ferrão [5].
 
-•  Incineration Capacity: The lower and upper bounds for incineration capacity, set at 100 tons and 390 tons per day, respectively, are derived from the investigations detailed in the study by Aleluia and Ferrão [6].
+•  Incineration Capacity: The lower and upper bounds for incineration capacity, set at 100 tons and 600 tons per day, respectively, are derived from the investigations detailed in the study by Aleluia and Ferrão [6].
 
-•  Recycing Capacity: The lower and upper bounds for incineration capacity, set at 100 tons and 500 tons per day, respectively, are derived from the investigations detailed in the study by Aleluia and Ferrão [6].
+•  Recycing Capacity: The lower and upper bounds for incineration capacity, set at 100 tons and 600 tons per day, respectively, are derived from the investigations detailed in the study by Aleluia and Ferrão [6].
+
+•  Landfill site count limit: This papre finds it hard to accurately measure the environment impact of solidwaste landfill so this paper constraints the count limit of landfill site to limit the impat of solidwaste landfill. The effect of landfill constraint will be discussed in computational result.
 
 ## Computational Result
-In case of 1 landfill site, ...
-In case of 2 landfill site, ...
+In case of 1 landfill site limitation, the model finds no feasible solution because of the capacity limit of single landfill site.
+
+In case of 2 landfill site limitation, the optimization yielded an optimal objective value of 3,363,562.866, which represents the minimum cost (in yuan) in a year associated with the solid waste management system under the given constraints. Notably, the results reveal a varied utilization of treatment technologies across the different candidate locations for treatment plants and highlight a selective approach to landfill usage.
+
+Incinerator capacity was partially used at candidate locations 1 and 2, with 290 tons and 600 tons processed, respectively. This suggests that incineration, despite its high efficiency in volume reduction, was not the most cost-effective option across all scenarios due to either its higher operational costs or the limited waste suitable for incineration. Both Composting and Recycling technologies were maximally utilized (600 tons each) across most candidate locations, indicating a preference for these treatment methods. This could be due to lower operating costs, higher material recovery rates, or policy incentives for recycling and composting.
+
+Two landfills were utilized, with disposal capacities of 9,986 tons and 14,591 tons, respectively. This aligns with the constraint of not exceeding two landfills, focusing on minimizing the environmental impact and costs associated with landfills. The selection of these two landfills could be justified by their proximity to waste generation sources or treatment facilities, reducing transportation costs.
+
+In case of 3 landfill site limitation, the objective value has significantly decreased to 1,655,002.519 from 3,363,562.866 when the landfill count limit was two. This substantial reduction in cost indicates that allowing an additional landfill site enables more cost-effective waste disposal options, possibly due to reduced transportation distances for some of the waste or the utilization of landfills with lower operational costs.
+
+In contrast to the previous results where composting, recycling, and incineration were utilized to varying degrees across different sites, this scenario shows a predominant focus on recycling, with processing occurring at only one candidate location (600 tons processed) and a smaller amount at another (110 tons). This change suggests that with more landfill options available, the model finds it more cost-effective to dispose of waste directly rather than process it through composting or incineration.
+Reduced Treatment Diversity: The near-exclusive reliance on recycling in this scenario, with no waste processed through composting or incineration, reflects a strategic shift towards direct disposal in landfills, presumably because this option became more economically viable with the increased landfill availability.
+
+With the landfill count limit increased to three, the model optimizes the use of three landfills, with disposal capacities of 9,199 tons, 8,215 tons, and 13,425 tons, respectively. This expanded utilization demonstrates the model’s flexibility in leveraging additional landfill capacity to minimize overall costs.
+
+While increasing the number of landfills used can reduce transportation and operational costs, it also raises considerations regarding the environmental impact. More active landfills could mean a greater potential for land degradation and pollution unless managed with state-of-the-art containment and treatment technologies.
+
+ The reduced objective value highlights a trade-off between minimizing costs and managing the environmental footprint. Allowing more landfills can lower costs but potentially at the expense of increased environmental impacts, emphasizing the need for careful policy and management decisions that balance these factors.
+
 
 ## Reference
 [1]Ghiani, G., Laganà, D., Manni, E., Musmanno, R., & Vigo, D. (2014). Operations research in solid waste management: A survey of strategic and tactical issues. Computers & Operations Research, 44, 22-32.
