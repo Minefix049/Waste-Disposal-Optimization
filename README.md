@@ -251,9 +251,11 @@ This sector introduces the various cost parameters and constraint parameters in 
 
 •  Fixed Cost: The fixed cost to invest an incinerator treatplant is $135000000$ yuan. Cosidering its lifecycle expanding 100 years, the fixed cost each year is $1350000$ yuan then. 
 
-  The fixed cost to invest an composting treatplant is $1200000000$ yuan. Considering its lifecycle expanding 100 years, the fixed cost each year is $12000000$ yuan then.
+  The fixed cost to invest an composting treatplant is $200000000$ yuan. Considering its lifecycle expanding 100 years, the fixed cost each year is $12000000$ yuan then.
 
-  The fixed cost to invest an landfill is $40000000$ yuan according to national data files. Considering its lifecycle expanding 100 years, the fixed cost each year is $40000000$ yuan then.
+  The fixed cost to invest an landfill is $120000000$ yuan according to national data files. Considering its lifecycle expanding 100 years, the fixed cost each year is $1200000$ yuan then.
+
+  The fixed cost to invest an landfill is $19500000$ yuan according to national data files. Considering its lifecycle expanding 100 years, the fixed cost each year is $195000$ yuan then.
 
 #### Operation Constraints
 
