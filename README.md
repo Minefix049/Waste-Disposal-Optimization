@@ -105,6 +105,10 @@ To support the analytical processes of this study, we employ the Google OR-Tools
 ### Comprehensive Approach for Solid Waste Management Optimization
 Integrating real-world data on collection centers with advanced modeling and analytical techniques, this study presents a comprehensive approach to optimizing solid waste management on Shengsi Island. By accurately estimating waste generation and employing sophisticated MILP modeling, we lay the groundwork for a more efficient, targeted, and sustainable waste management infrastructure that is finely tuned to the specific needs and characteristics of the island's sectors.
 
+### Residue Rate
+
+The reduction factor, representing the residue rate, signifies the proportion of material remaining after waste processing methods such as incineration (10%), composting (20%), and recycling (30%). It serves as a critical parameter in evaluating the efficiency of these processes and determining the extent of waste reduction achieved through them.
+
 ## Mathematical Formulation
 
 Based on the modeling method in literature review, considering the actual requirements of shengsi island, we decided to use 1/P,L/-/TC,PC,FC MIP model to solve the locational planning of SWM system in shengsi island. Because of the limited landspace in Shengsi island, this study didn't consider the requirements of transfer station in this model. The model can be fourmulated as follow. 
@@ -189,7 +193,7 @@ This paper utilizes existing waste collection centers on Shengsi Island. We use 
 
 ### Existing collection centers and operational coverage areas
 
-| Index | Polygon Coordinates                                       | Residential areas count | Waste generation estimation per year |
+| Index | Polygon Coordinates                                       | Residential areas count | Waste generation estimation per year(ton) |
 |-----|-----------------------------------------------------------|-------------------------|-----------------------------|
 |  1  | 122.447,30.768 \| 122.474,30.768 \| 122.474,30.743 \| 122.447,30.743 | 25                      | 1202                        |
 |  2  | 122.490,30.725 \| 122.538,30.725 \| 122.538,30.696 \| 122.490,30.696 | 26                      | 1245                        |
@@ -209,7 +213,17 @@ We selected several location candidates for both process plant and landfill by c
 
 These criteria ensure the selected locations contribute to sustainable waste management while minimizing environmental impact and maximizing resource efficiency on Shengsi Island.
 
-Need to copy the location candidates overhere!!
+Here's the coordinate of candidate we selected.
+
+| ID  | Coordinates       |
+|-----|-------------------|
+| 1   | 122.467, 30.752  |
+| 2   | 122.440, 30.740  |
+| 3   | 122.464, 30.729  |
+| 4   | 122.442, 30.712  |
+| 5   | 122.533, 30.703  |
+| 6   | 122.463, 30.692  |
+
 
 ### Distance Matrix
 
@@ -224,27 +238,31 @@ These matrices support waste disposal planning, aiding decision-makers in strate
 
 #### Waste Collection Distance Matrix：
 
-| 2851.0  | 2326.0  | 4095.0  | 7257.0  | 14993.0 | 10578.0 |
-|---------|---------|---------|---------|---------|---------|
-| 15151.0 | 12210.0 | 10093.0 | 14769.0 | 2161.0  | 8792.0  |
-| 10110.0 | 10955.0 | 4998.0  | 6027.0  | 11685.0 | 1780.0  |
-| 5505.0  | 2624.0  | 1159.0  | 7555.0  | 12048.0 | 5758.0  |
-| 10495.0 | 6963.0  | 4366.0  | 11548.0 | 8571.0  | 2822.0  |
-| 14075.0 | 10543.0 | 10607.0 | 5615.0  | 16103.0 | 6088.0  |
+| Distance Matrix         | Point 1 | Point 2 | Point 3 | Point 4 | Point 5 | Point 6 |
+|-------------------------|---------|---------|---------|---------|---------|---------|
+| Collection Process      | 2851.0  | 2326.0  | 4095.0  | 7257.0  | 14993.0 | 10578.0 |
+|                         | 15151.0 | 12210.0 | 10093.0 | 14769.0 | 2161.0  | 8792.0  |
+|                         | 10110.0 | 10955.0 | 4998.0  | 6027.0  | 11685.0 | 1780.0  |
+|                         | 5505.0  | 2624.0  | 1159.0  | 7555.0  | 12048.0 | 5758.0  |
+|                         | 10495.0 | 6963.0  | 4366.0  | 11548.0 | 8571.0  | 2822.0  |
+|                         | 14075.0 | 10543.0 | 10607.0 | 5615.0  | 16103.0 | 6088.0  |
+
 
 #### Landfill Processing Plant Distance Matrix：
 
-| 2851.0  | 2326.0  | 4095.0  | 7257.0  | 14993.0 | 10578.0 |
-|---------|---------|---------|---------|---------|---------|
-| 15151.0 | 12210.0 | 10093.0 | 14769.0 | 2161.0  | 8792.0  |
-| 10110.0 | 10955.0 | 4998.0  | 6027.0  | 11685.0 | 1780.0  |
-| 5505.0  | 2624.0  | 1159.0  | 7555.0  | 12048.0 | 5758.0  |
-| 10495.0 | 6963.0  | 4366.0  | 11548.0 | 8571.0  | 2822.0  |
-| 14075.0 | 10543.0 | 10607.0 | 5615.0  | 16103.0 | 6088.0  |
+| Distance Matrix               | Point 1 | Point 2 | Point 3 | Point 4 | Point 5 | Point 6 |
+|--------------------------------|---------|---------|---------|---------|---------|---------|
+| Process to Landfill           | 2851.0  | 2326.0  | 4095.0  | 7257.0  | 14993.0 | 10578.0 |
+|                                | 15151.0 | 12210.0 | 10093.0 | 14769.0 | 2161.0  | 8792.0  |
+|                                | 10110.0 | 10955.0 | 4998.0  | 6027.0  | 11685.0 | 1780.0  |
+|                                | 5505.0  | 2624.0  | 1159.0  | 7555.0  | 12048.0 | 5758.0  |
+|                                | 10495.0 | 6963.0  | 4366.0  | 11548.0 | 8571.0  | 2822.0  |
+|                                | 14075.0 | 10543.0 | 10607.0 | 5615.0  | 16103.0 | 6088.0  |
 
 ### Model Parameters
 #### Cost Parameters
 This sector introduces the various cost parameters and constraint parameters in the optimization models. The cost parameters can be divided into several categoris.
+
 •  Processing Cost:  The variable treatment cost of incinerator is $350$ yuan/ton, while for composting is $250$ yuan/ton and $100$ yuan/ton for recycling plants. The variable treatment of landfill is $250$ yuan/ton.
 
 •  Transportation Cost: The transportation cost of vehicles running between collection centers and processing plants is $7$ yuan/ton * km. The transportation cost of trucks running between processing plants and landfill sites is $30$ yuan/ton * km.
@@ -259,36 +277,47 @@ This sector introduces the various cost parameters and constraint parameters in 
 
 #### Operation Constraints
 
-Waste transportation flow:
-The upperbound for waste transportation flow shoule be about 4000 tons of trash per day according to China's national policy of 2025.
+This paper considers multiple constrains not only as  feasibility guarantees, but also as cutting planes. These constraints are as follow.
 
-Landfill Capacity:
-The bounds for landfill capacity, ranging from a lower limit of 0 to an upper limit of 11,000 tons, are established based on insights from the study by Kollikkathara, Feng, and Yu (2010).
+•  Landfill Capacity: The bounds for landfill capacity, ranging from a lower limit of 0 to an upper limit of 11,000 tons, are established based on insights from the study by Kollikkathara, Feng, and Yu[4].
 
-Compost Capacity:
-Compost capacity is governed by lower and upper bounds of 100 tons and 600 tons per day, respectively, drawn from the research findings presented by Aleluia and Ferrão (2017).
+•  Compost Capacity: Compost capacity is governed by lower and upper bounds of 100 tons and 600 tons per day, respectively, drawn from the research findings presented by Aleluia and Ferrão [5].
 
-Incineration Capacity:
-The lower and upper bounds for incineration capacity, set at 100 tons and 390 tons per day, respectively, are derived from the investigations detailed in the study by Aleluia and Ferrão (2017).
+•  Incineration Capacity: The lower and upper bounds for incineration capacity, set at 100 tons and 600 tons per day, respectively, are derived from the investigations detailed in the study by Aleluia and Ferrão [6].
 
-```python
-FLOW_UPPERBOUND = 4000
-LANDFILL_CAPACITY_LOWERBOUND = 0
-LANDFIll_CAPACITY_UPPERBOUND = 11000
-COMPOST_CAPACITY_LOWERBOUND = 100
-COMPOST_CAPACITY_UPPERBOUND = 600
-INCINERATION_CAPACITY_LOWERBOUND = 100
-INCINERATION_CAPACITY_UPPERBOUND = 390
-```
+•  Recycing Capacity: The lower and upper bounds for incineration capacity, set at 100 tons and 600 tons per day, respectively, are derived from the investigations detailed in the study by Aleluia and Ferrão [6].
 
-## Discusion
-In case of 1 landfill site, ...
-In case of 2 landfill site, ...
+•  Landfill site count limit: This papre finds it hard to accurately measure the environment impact of solidwaste landfill so this paper constraints the count limit of landfill site to limit the impat of solidwaste landfill. The effect of landfill constraint will be discussed in computational result.
+
+## Computational Result
+In case of 1 landfill site limitation, the model finds no feasible solution because of the capacity limit of single landfill site.
+
+In case of 2 landfill site limitation, the optimization yielded an optimal objective value of 3,363,562.866, which represents the minimum cost (in yuan) in a year associated with the solid waste management system under the given constraints. Notably, the results reveal a varied utilization of treatment technologies across the different candidate locations for treatment plants and highlight a selective approach to landfill usage.
+
+Incinerator capacity was partially used at candidate locations 1 and 2, with 290 tons and 600 tons processed, respectively. This suggests that incineration, despite its high efficiency in volume reduction, was not the most cost-effective option across all scenarios due to either its higher operational costs or the limited waste suitable for incineration. Both Composting and Recycling technologies were maximally utilized (600 tons each) across most candidate locations, indicating a preference for these treatment methods. This could be due to lower operating costs, higher material recovery rates, or policy incentives for recycling and composting.
+
+Two landfills were utilized, with disposal capacities of 9,986 tons and 14,591 tons, respectively. This aligns with the constraint of not exceeding two landfills, focusing on minimizing the environmental impact and costs associated with landfills. The selection of these two landfills could be justified by their proximity to waste generation sources or treatment facilities, reducing transportation costs.
+
+In case of 3 landfill site limitation, the objective value has significantly decreased to 1,655,002.519 from 3,363,562.866 when the landfill count limit was two. This substantial reduction in cost indicates that allowing an additional landfill site enables more cost-effective waste disposal options, possibly due to reduced transportation distances for some of the waste or the utilization of landfills with lower operational costs.
+
+In contrast to the previous results where composting, recycling, and incineration were utilized to varying degrees across different sites, this scenario shows a predominant focus on recycling, with processing occurring at only one candidate location (600 tons processed) and a smaller amount at another (110 tons). This change suggests that with more landfill options available, the model finds it more cost-effective to dispose of waste directly rather than process it through composting or incineration.
+Reduced Treatment Diversity: The near-exclusive reliance on recycling in this scenario, with no waste processed through composting or incineration, reflects a strategic shift towards direct disposal in landfills, presumably because this option became more economically viable with the increased landfill availability.
+
+With the landfill count limit increased to three, the model optimizes the use of three landfills, with disposal capacities of 9,199 tons, 8,215 tons, and 13,425 tons, respectively. This expanded utilization demonstrates the model’s flexibility in leveraging additional landfill capacity to minimize overall costs.
+
+While increasing the number of landfills used can reduce transportation and operational costs, it also raises considerations regarding the environmental impact. More active landfills could mean a greater potential for land degradation and pollution unless managed with state-of-the-art containment and treatment technologies.
+
+ The reduced objective value highlights a trade-off between minimizing costs and managing the environmental footprint. Allowing more landfills can lower costs but potentially at the expense of increased environmental impacts, emphasizing the need for careful policy and management decisions that balance these factors.
+
 
 ## Reference
 [1]Ghiani, G., Laganà, D., Manni, E., Musmanno, R., & Vigo, D. (2014). Operations research in solid waste management: A survey of strategic and tactical issues. Computers & Operations Research, 44, 22-32.
-Aleluia, J., Ferrão, P. Assessing the costs of municipal solid waste treatment technologies in developing Asian countries. Waste Management (2017)
-Mitropoulos, P., Giannikos, I., & Mitropoulos, I. (2009). Exact and heuristic approaches for the locational planning of an integrated solid waste management system. Operational Research, 9, 329-347.
-Caruso, C., Colorni, A., & Paruccini, M. (1993). The regional urban solid waste management system: A modelling approach. European journal of operational research, 70(1), 16-30.
-Kollikkathara, N., Feng, H., & Yu, D. (2010). A system dynamic modeling approach for evaluating municipal solid waste generation, landfill capacity and related cost management issues. Waste management, 30(11), 2194-2203.
+
+[2]Caruso, C., Colorni, A., & Paruccini, M. (1993). The regional urban solid waste management system: A modelling approach. European journal of operational research, 70(1), 16-30.
+
+[3]Mitropoulos, P., Giannikos, I., & Mitropoulos, I. (2009). Exact and heuristic approaches for the locational planning of an integrated solid waste management system. Operational Research, 9, 329-347.
+
+[4]Kollikkathara, N., Feng, H., & Yu, D. (2010). A system dynamic modeling approach for evaluating municipal solid waste generation, landfill capacity and related cost management issues. Waste management, 30(11), 2194-2203.
+
+[5]Aleluia, J., Ferrão, P. Assessing the costs of municipal solid waste treatment technologies in developing Asian countries. Waste Management (2017)
 
